@@ -32,16 +32,20 @@ class MainActivity : ComponentActivity() {
                 }
                 Column (
                     modifier = Modifier.fillMaxSize(),
+                    // center vertically
                     verticalArrangement = Arrangement.Center,
+                    // center horizontally
                     horizontalAlignment = Alignment.CenterHorizontally
                 ){
 
                     Text(
+                        // added display text, that displays current count
                         text = count.toString(),
                         fontSize = 50.sp
                     )
 
                     Button(onClick = {
+                        // on click increase count
                         count++
                     }) {
                         Text(text = "Click!")
